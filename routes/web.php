@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'ResponceController@index')->name('index');
-Route::post('/confirm', 'ResponceController@create')->name('confirm');
-Route::post('/', 'ResponceController@store')->name('store_responce');
-Route::get('/{responce}', 'ResponceController@show')->name('show_responce');
-Route::put('/{responce}', 'ResponceController@update')->name('update_responce');
+Route::post('/confirm', 'ResponceController@confirm')->name('confirm');
+Route::post('/', 'ResponceController@store')->name('store');
+Route::get('/leaderboard/{responce?}', 'ResponceController@leaderboard')->name('leaderboard');
