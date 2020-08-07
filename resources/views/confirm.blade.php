@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Leaderboard')
+@section('title', 'Confirm your entry')
 
 @section('content')
     <div>
