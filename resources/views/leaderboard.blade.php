@@ -4,6 +4,9 @@
 
 @section('content')
     <?php $my_result_shown = false; ?>
+    @if ($my_result == null)
+        <?php $my_result_shown = true; ?>
+    @endif
 	<table class="table100 mt-12">
 		<thead class="table100-head">
 			<tr>
@@ -15,7 +18,7 @@
 		</thead>
 		<tbody class="table100-body">
             @foreach ($leaderboard as $result)
-                @if ($my_result->id == $result->id)
+                @if ($my_result !== null && $my_result->id == $result->id)
                     <?php $my_result_shown = true; ?>
                     <tr class="bold">
                 @else
